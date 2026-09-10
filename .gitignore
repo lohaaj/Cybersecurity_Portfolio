@@ -42,3 +42,35 @@ terraform.rc
 # Optional: ignore plan files saved before destroying Terraform configuration
 # Uncomment the line below if you want to ignore planout files.
 # planout
+
+# Security & Credentials (CRITICAL FOR IAM LABS)
+*.pem
+*.key
+*.p12
+*.pfx
+*access_key*
+*secret*
+.env
+.env.*
+secrets.json
+credentials
+
+# Terraform / Infrastructure as Code State & Keys
+# (Terraform state files often store IAM secrets/keys in plain text!)
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/
+override.tf
+override.tf.json
+
+# Cloud SDK & Tooling Caches
+.aws/
+.gcp/
+.azure/
+.serverless/
+
+# IDE & OS Metadata
+.vscode/
+.idea/
+.DS_Store
